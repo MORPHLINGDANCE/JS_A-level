@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>04</title>
+</head>
+<body>
+<script>
+   let odd = function odd() {
+        // Number: odd
+        let number = +prompt("Введите число","22");
+        if(typeof number === "number" && number %2 === 0){
+            console.log(`${number} - парное число`);
+        }
+        else {
+            alert(`Вы ввели не число`);
+        }
+    }
+   let lexics = function lexics() {
+        // String: lexics
+        let someText = prompt("Введите текст","12345");
+        if(someText.indexOf("негодяй") === -1){
+            console.log("Такого слова нет");
+        }else {
+            console.log("Текст прошел проверку");
+        }
+    }
+   let boolean = function boolean() {
+        // Boolean
+        const firstQuestion = confirm("Вам больше 18?");
+        const secondQuestion = confirm("Вы мужчина?");
+        const thirdQuestion = confirm("Вы учитесь в университете?");
+        console.log("Вам 18 лет?:", firstQuestion ? "Да" : "Нет");
+        console.log("Вы мужчинам?:", secondQuestion ? "Да" : "Нет");
+        console.log("Вы учитесь в университете?:", thirdQuestion ? "Да" : "Нет");
+    }
+   let booleanIf = function booleanIf() {
+        // Boolean: if
+        const firstQuestion = confirm("Вам больше 18?");
+        const secondQuestion = confirm("Вы мужчина?");
+        const thirdQuestion = confirm("Вы учитесь в университете??");
+        console.log("Вам 18 лет?:", firstQuestion ? "Да" : "Нет");
+        console.log("Вы мужчина?:", secondQuestion ? "Да" : "Нет");
+        console.log("Вы учитесь в университете?:", thirdQuestion ? "Да" : "Нет");
+        if(firstQuestion){
+            console.log("Вам больше 18");
+        }else {
+            console.log("Вам меньше 18");
+        }
+        if(secondQuestion){
+            console.log("Вы мужчина");
+        }else {
+            console.log("Вы женщина");
+        }
+        if(thirdQuestion){
+            console.log("Вы студент");
+        }else {
+            console.log("Вы не студент?");
+        }
+    }
+   let sizes = function sizes()
+    {
+        // Comparison: sizes
+        // из ВЕЛИКОБРИТАНИИ в Италию
+        let size = [38,40,42,44,46,48,50,52];
+        let sizeLing = ['XXS','XS','S','M','L','XL','XXL','XXL'];
+        let sizeStockings =[0,1,2,3,4,5,6,7];
+        let outerwear = +prompt("Выберите размер верхней одежды","8");
+        if (outerwear === 8){
+            alert(`По Итальяской системе это будет ${size[0]} размер`);
+        }else if(outerwear === 10){
+            alert(`По Итальяской системе это будет ${size[1]} размер`);
+        }else if(outerwear === 12){
+            alert(`По Итальяской системе это будет ${size[2]} размер`);
+        }else if(outerwear === 14){
+            alert(`По Итальяской системе это будет ${size[3]} размер`);
+        }else if(outerwear === 16){
+            alert(`По Итальяской системе это будет ${size[4]} размер`);
+        }else if(outerwear === 18){
+            alert(`По Итальяской системе это будет ${size[5]} размер`);
+        }else if(outerwear === 20){
+            alert(`По Итальяской системе это будет ${size[6]} размер`);
+        }else if(outerwear === 22){
+            alert(`По Итальяской системе это будет ${size[7]} размер`);
+        }
+        let lingerie = +prompt("Выберите размер белья","30");
+        if (lingerie === 24){
+            alert(`По Итальяской системе это будет ${sizeLing[0]} размер`);
+        }else if(lingerie === 26){
+            alert(`По Итальяской системе это будет ${sizeLing[1]} размер`);
+        }else if(lingerie === 28){
+            alert(`По Итальяской системе это будет ${sizeLing[2]} размер`);
+        }else if(lingerie === 30){
+            alert(`По Итальяской системе это будет ${sizeLing[3]} размер`);
+        }else if(lingerie === 32){
+            alert(`По Итальяской системе это будет ${sizeLing[4]} размер`);
+        }else if(lingerie === 34){
+            alert(`По Итальяской системе это будет ${sizeLing[5]} размер`);
+        }else if(lingerie === 36){
+            alert(`По Итальяской системе это будет ${sizeLing[6]} размер`);
+        }else if(lingerie === 38){
+            alert(`По Итальяской системе это будет ${sizeLing[7]} размер`);
+        }
+        let stockings = +prompt("Выберите размер чулков","11");
+        if (stockings === 8){
+            alert(`По Итальяской системе это будет ${sizeStockings[0]} размер`);
+        }else if(stockings === 8.5){
+            alert(`По Итальяской системе это будет ${sizeStockings[1]} размер`);
+        }else if(stockings === 9){
+            alert(`По Итальяской системе это будет ${sizeStockings[2]} размер`);
+        }else if(stockings === 9.5){
+            alert(`По Итальяской системе это будет ${sizeStockings[3]} размер`);
+        }else if(stockings === 10){
+            alert(`По Итальяской системе это будет ${sizeStockings[4]} размер`);
+        }else if(stockings === 10.5){
+            alert(`По Итальяской системе это будет ${sizeStockings[5]} размер`);
+        }else if(stockings === 11){
+            alert(`По Итальяской системе это будет ${sizeStockings[6]} размер`);
+        }else if(stockings === 11.5){
+            alert(`По Итальяской системе это будет ${sizeStockings[7]} размер`);
+        }
+    }
+   let ternary = function ternary()  {
+        // Ternary
+        let question = confirm("Вы мужчина") ?  alert("Вы мужчина") : alert("Вы женщина");
+    }
+   let or = function or() {
+        // // Prompt: or
+        let age = + prompt('Введите ваш возраст');
+        if(age === null|| age === ''){
+            alert('Вы не ввели возраст');
+        }else{
+            alert(age);
+        }
+    }
+   let confirm1 = function confirm1() {
+        // Confirm: or this days
+        let robot = confirm('Шопинш?') || alert('ты - бяка');
+    }
+   let confirmIf = function confirmIf() {
+        // Confirm: if this days
+        let robot = confirm('Шопинш?');
+        if(robot){
+        }else {
+            alert('ты - бяка');
+        }
+    }
+   let defaultOr = function defaultOr() {
+        // Default: or
+        let surname = prompt('Введите фамилию') || alert('Иванов');
+        let name = prompt('Введите имя') || alert('Петр');
+        let patronymic = prompt('Введите отчество') || alert('Сергеевич');
+    }
+   let defaultIf = function defaultIf(){
+       // Default: if
+       let surname = prompt('Введите фамилию');
+       let name = prompt('Введите имя');
+       let patronymic = prompt('Введите отчество');
+       if (surname === '' || surname === ' ' || surname === null && name === '' || name === ' ' || name === null && patronymic === '' || patronymic === ' ' || patronymic === null){
+           surname = 'Иванов';
+           name = 'Петр';
+           patronymic = 'Сергеевич';
+       }alert(surname+" "+name+" "+patronymic);
+   }
+   let loginAndPassword = function loginAndPassword() {
+        // Login and password
+        let login = prompt('Введите логи');
+        let password = prompt('Введите пароль');
+        if(login === 'admin' && password === 'qwerty'){
+            alert('Ви ввели все правильно');
+        }else {
+            alert('Ваш пароль или логин неверный');
+        }
+    }
+   let currency = function currency()
+   {
+        // // Currency exchange
+        let currency = prompt('Введите валюту usd,eur','usd').toLowerCase();
+        let question = confirm('Вы собиратаесь купить или продать?');
+        let rate;
+        if (currency === 'usd') {
+            rate = 33;
+        } else if (currency === 'eur') {
+            rate = 40;
+        }
+        if(question && currency){ //купить
+            rate = currency === 'usd' ? 33 : 40 ;
+            alert(`Курс составляет ${rate}`)
+        }else if(currency && question === false){// обменять
+                let request = +prompt('Введите сумму на обмен');
+                let result = request * rate;
+                alert('Ваша сумма составляет: ' + result);
+        }else {
+            alert('rate');
+        }
+    }
+    let scissors = function scissors(){
+        // Scissors
+        let user = prompt('Введите свой вариант','Ножницы').toLowerCase();
+        let varian = Math.random();
+        if(varian < 0.33){
+            varian = 'ножницы';
+        }else if(varian < 0.66){
+            varian = 'бумага';
+        }else {
+            varian = 'камень';
+        }
+        if (varian === user){
+            alert('Ничья')
+        }else if(varian === 'ножницы' && user === 'бумага' || varian === 'камень' && user === 'ножницы' || varian === 'бумага' && user === 'камень'){
+            alert('Робот победил')
+        }else {
+            alert('Ви победили!')
+        }
+    }
+    {
+        // Додаткове завдання
+        let request = prompt('Введите задание','Comparison : Sizes').toLowerCase().replaceAll(' ', '');
+        if(request === 'number:odd'){
+            odd();
+        }else if(request === 'string:lexics'){
+            lexics();
+        }else if(request === 'boolean'){ ///////////
+            boolean();
+        }else if(request === 'boolean:if'){ ///////////
+            booleanIf();
+        }else if(request === 'comparison:sizes'){
+            sizes();
+        }else if(request === 'ternary'){ //////////
+            ternary();
+        }else if(request === 'prompt:or'){
+            or();
+        }else if(request === 'confirm:orthisdays:or'){ ///////////
+            confirm1();
+        }else if(request === 'confirm:ifthisdays'){ /////////
+            confirmIf();
+        }else if(request === 'default:or'){
+            defaultOr();
+        }else if(request === 'default:if'){
+            defaultIf();
+        }else if(request === 'loginandpassword'){
+            loginAndPassword();
+        }else if(request === 'currencyexchange'){ ///////////
+            currency();
+        }else if(request === 'scissors'){
+            scissors();
+        }else {
+            alert('ERROR')
+        }
+    }
+</script>
+</body>
+</html>
