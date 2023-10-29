@@ -189,14 +189,10 @@
         if(question && currency){ //купить
             rate = currency === 'usd' ? 33 : 40 ;
             alert(`Курс составляет ${rate}`)
-        }else if(currency && question === false){// обменять
-                let request = +prompt('Введите сумму на обмен');
-                let result = request * rate;
-                alert('Ваша сумма составляет: ' + result);
-        }else {
-            alert('rate');
         }
-    }
+            let request = +prompt('Введите сумму на обмен');
+            let result = request * rate;
+            alert('Ваша сумма составляет: ' + result);
     let scissors = function scissors(){
         // Scissors
         let user = prompt('Введите свой вариант','Ножницы').toLowerCase();
