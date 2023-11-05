@@ -10,297 +10,288 @@
 <body>
 <script>
     {
-        // // Confirms
-        // let arr = [confirm('Ви мужчина?'), confirm('Вам 18?'), confirm('Ви дома?')]
-        // console.log(arr);
+        // Confirms
+        let arr = [confirm('Ви мужчина?'), confirm('Вам 18?'), confirm('Ви дома?')]
+        console.log(arr);
     }
     {
-        // // Prompts
-        // let answers = [];
-        // answers[0] = prompt('Як вас звати?');
-        // answers[1] = prompt('Скільки вам років?');
-        // answers[2] = prompt('Де ви живете?');
-        // console.log(answers);
+        // Prompts
+        let answers = [];
+        answers[0] = prompt('Як вас звати?');
+        answers[1] = prompt('Скільки вам років?');
+        answers[2] = prompt('Де ви живете?');
+        console.log(answers);
     }
     {
-        // // Item access
-        // let arr = [1,'25','Шалом'];
-        // let user = prompt('Введите индекс массива','1');
-        // let length = prompt('Введите элемент длинну которого Вы хотите узнать','2');
-        // console.log(`Значение по индексу ${user} = ${arr[user]}, а длинна равна ${arr[length].length}`);
+        // Item access
+        let arr = [1,'25','Шалом'];
+        let user = prompt('Введите индекс массива','1');
+        let length = prompt('Введите элемент длинну которого Вы хотите узнать','2');
+        console.log(`Значение по индексу ${user} = ${arr[user]}, а длинна равна ${arr[length].length}`);
     }
     {
-        // // Item change
-        // let arr = [1,'25','Шалом'];
-        // let index = prompt('Введите индекс массива','1');
-        // let value = prompt('Введите значение на место этого индекса','JavaScript');
-        // arr[index] = value;
-        // console.log(arr);
+        // Item change
+        let arr = [1,'25','Шалом'];
+        let index = prompt('Введите индекс массива','1');
+        let value = prompt('Введите значение на место этого индекса','JavaScript');
+        arr[index] = value;
+        console.log(arr);
     }
     {
-        // // Multiply table
-        // const arr = [
-        //     [0, 2, 3, 4, 5],
-        //     [2, 4, 6, 8, 10],
-        //     [3, 6, 9, 12, 15],
-        //     [4, 8, 12, 16, 20],
-        //     [5, 10, 15, 20, 25]
-        // ];
-        // console.log(arr)
+        // Multiply table
+        const arr = [
+            [0, 2, 3, 4, 5],
+            [2, 4, 6, 8, 10],
+            [3, 6, 9, 12, 15],
+            [4, 8, 12, 16, 20],
+            [5, 10, 15, 20, 25]
+        ];
+        console.log(arr)
     }
     {
-        // // Multiply table slice/////////////////////////////////
-        // const arr = [
-        //     [0, 2, 3, 4, 5],
-        //     [2, 4, 6, 8, 10],
-        //     [3, 6, 9, 12, 15],
-        //     [4, 8, 12, 16, 20],
-        //     [5, 10, 15, 20, 25]
-        // ];
-        // const newArr = arr.map(row => row.slice().filter(num => num !== 0));
-        // console.log(newArr);
+        // Multiply table slice/////////////////////////////////
+        const arr = [
+            [0, 2, 3, 4, 5],
+            [2, 4, 6, 8, 10],
+            [3, 6, 9, 12, 15],
+            [4, 8, 12, 16, 20],
+            [5, 10, 15, 20, 25]
+        ];
+        const newArr = arr.map(row => row.slice().filter(num => num !== 0));
+        console.log(newArr);
     }
     {
-        // // IndexOf Word
-        // let question = [prompt('Введите несколько слов', 'Бонжур,как дела друг').toLowerCase()];
-        // let secondQuestion = [prompt('Слово на проверку', 'Бонжур').toLowerCase()];
-        // if (question.indexOf[secondQuestion] !== -1) {
-        //     console.log(`В введенном Вами предложении есть слово ${secondQuestion}`);
-        // } else {
-        //     console.log('Такого слова нет');
-        // }
+        // IndexOf Word
+        let question = [prompt('Введите несколько слов', 'Бонжур,как дела друг').toLowerCase()];
+        let secondQuestion = [prompt('Слово на проверку', 'Бонжур').toLowerCase()];
+        if (question.indexOf[secondQuestion] !== -1) {
+            console.log(`В введенном Вами предложении есть слово ${secondQuestion}`);
+        } else {
+            console.log('Такого слова нет');
+        }
     }
     {
-        // // Reverse
-        // let arr = [1,'25','Шалом'];
-        // for (let i = 1; i < 6; i ++){
-        //     arr.push(prompt('Ведите элемент',`${i}`));
-        // }
-        // console.log(arr.length)
-        // console.log(arr)
-        // let anotherArr = [];
-        // for (let i = 0; i  < 8; i ++){
-        //     anotherArr.push(arr.pop());
-        // }
-        // console.log(anotherArr)
+        // Reverse
+        let arr = [1,'25','Шалом'];
+        for (let i = 1; i < 6; i ++){
+            arr.push(prompt('Ведите элемент',`${i}`));
+        }
+        console.log(arr.length)
+        console.log(arr)
+        let anotherArr = [];
+        for (let i = 0; i  < 8; i ++){
+            anotherArr.push(arr.pop());
+        }
+        console.log(anotherArr)
     }
     {
-        // // Reverse 2
-        // let arr = [1,'25','Шалом'];
-        // for (let i = 1; i < 6; i ++){
-        //     arr.push(prompt('Ведите элемент',`${i}`));
-        // }
-        // console.log(arr)
-        // let anotherArr = [];
-        // for (let i = 0; i < 8; i ++){
-        //     anotherArr.push(arr.pop());
-        // }
-        // let result = [];
-        // console.log(anotherArr) // 5 , 4, 3, 2 , 1, Шалом , 25 , 1
-        // for (let i = 0; i < 8; i ++){
-        //     result.unshift(anotherArr.shift())
-        // }
-        // console.log(result)
+        // Reverse 2
+        let arr = [1,'25','Шалом'];
+        for (let i = 1; i < 6; i ++){
+            arr.push(prompt('Ведите элемент',`${i}`));
+        }
+        console.log(arr)
+        let anotherArr = [];
+        for (let i = 0; i < 8; i ++){
+            anotherArr.push(arr.pop());
+        }
+        let result = [];
+        console.log(anotherArr) // 5 , 4, 3, 2 , 1, Шалом , 25 , 1
+        for (let i = 0; i < 8; i ++){
+            result.unshift(anotherArr.shift())
+        }
+        console.log(result)
     }
     {
-        // // Copy
-        // const arr = [
-        //     [0, 2, 3, 4, 5],
-        //     [2, 4, 6, 8, 10],
-        //     [3, 6, 9, 12, 15],
-        //     [4, 8, 12, 16, 20],
-        //     [5, 10, 15, 20, 25]
-        // ];
-        // const arr2 = arr.slice();
-        // console.log(arr2);
+        // Copy
+        const arr = [
+            [0, 2, 3, 4, 5],
+            [2, 4, 6, 8, 10],
+            [3, 6, 9, 12, 15],
+            [4, 8, 12, 16, 20],
+            [5, 10, 15, 20, 25]
+        ];
+        const arr2 = arr.slice();
+        console.log(arr2);
     }
     {
-        // // Deep Copy
-        // const arr = [
-        //     [0, 2, 3, 4, 5],
-        //     [2, 4, 6, 8, 10],
-        //     [3, 6, 9, 12, 15],
-        //     [4, 8, 12, 16, 20],
-        //     [5, 10, 15, 20, 25]
-        // ];
-        // const arr2 = arr.map(subArray => subArray.slice())
-        // console.log(arr2);
+        // Deep Copy
+        const arr = [
+            [0, 2, 3, 4, 5],
+            [2, 4, 6, 8, 10],
+            [3, 6, 9, 12, 15],
+            [4, 8, 12, 16, 20],
+            [5, 10, 15, 20, 25]
+        ];
+        const arr2 = arr.map(subArray => subArray.slice())
+        console.log(arr2);
     }
     {
-        // // Array Equals
-        // let arr = [1,'25','Шалом'];
-        // let arr2 = arr; // [1,'25','Шалом'], [...arr], arr.slice()
-        // console.log(arr)
-        // console.log(arr2)
-        // if (arr === arr2){
-        //     console.log('yes')
-        // }else{
-        //     console.log('no')}
+        // Array Equals
+        let arr = [1,'25','Шалом'];
+        let arr2 = arr; // [1,'25','Шалом'], [...arr], arr.slice()
+        console.log(arr)
+        console.log(arr2)
+        if (arr === arr2){
+            console.log('yes')
+        }else{
+            console.log('no')}
     }
     {
-        // Flat
-        // const arr = [
-        //     [0, 2, 3, 4, 5],
-        //     [2, 4, 6, 8, 10],
-        //     [3, 6, 9, 12, 15],
-        //     [4, 8, 12, 16, 20],
-        //     [5, 10, 15, 20, 25]
-        // ];
-        // const flatt = arr.flat();
-        // console.log(flatt);
-        // console.log(flatt.length);
+        Flat
+        const arr = [
+            [0, 2, 3, 4, 5],
+            [2, 4, 6, 8, 10],
+            [3, 6, 9, 12, 15],
+            [4, 8, 12, 16, 20],
+            [5, 10, 15, 20, 25]
+        ];
+        const flatt = arr.flat();
+        console.log(flatt);
+        console.log(flatt.length);
     }
     {
-        // // Destruct
-        // let arr = [prompt('деструктуризация массива')]; // 1 5 9
-        // let [first, , , fifth, , , , , ninth] = arr[0];
-        // console.log(first+" "+fifth+" "+ninth)
+        // Destruct
+        let arr = [prompt('деструктуризация массива')]; // 1 5 9
+        let [first, , , fifth, , , , , ninth] = arr[0];
+        console.log(first+" "+fifth+" "+ninth)
     }
     {
-        // // Destruct default
-        // let arr = [prompt('деструктуризация массива')]; // 2 4 5
-        // let [, second = '!', ,fourth = '!' , fifth = '!'] = arr[0];
-        // console.log(second+" "+fourth+" "+fifth)
+        // Destruct default
+        let arr = [prompt('деструктуризация массива')]; // 2 4 5
+        let [, second = '!', ,fourth = '!' , fifth = '!'] = arr[0];
+        console.log(second+" "+fourth+" "+fifth)
     }
     {
-        // // Multiply table rest
-        // const arr = [
-        //     [0, 2, 3, 4, 5],
-        //     [2, 4, 6, 8, 10],
-        //     [3, 6, 9, 12, 15],
-        //     [4, 8, 12, 16, 20],
-        //     [5, 10, 15, 20, 25]
-        // ];
-        // const [first, second, third, fourth] = arr;
-        // const [,, ...restFirst] = first;
-        // const [,, ...restSecond] = second;
-        // const [,, ...restThird] = third;
-        // const [,, ...restFourth] = fourth;
-        // const combinedArray = restFirst.concat(restSecond, restThird, restFourth).filter(num => num !== 0);
-        // console.log(combinedArray);
+        // Multiply table rest
+        const arr = [
+            [0, 2, 3, 4, 5],
+            [2, 4, 6, 8, 10],
+            [3, 6, 9, 12, 15],
+            [4, 8, 12, 16, 20],
+            [5, 10, 15, 20, 25]
+        ];
+        const [first, second, third, fourth] = arr;
+        const [,, ...restFirst] = first;
+        const [,, ...restSecond] = second;
+        const [,, ...restThird] = third;
+        const [,, ...restFourth] = fourth;
+        const combinedArray = restFirst.concat(restSecond, restThird, restFourth).filter(num => num !== 0);
+        console.log(combinedArray);
 
     }
     {
-        // // For Alert
-        // let arr = ["John", "Paul", "George", "Ringo"];
-        // for (let arr2 of arr){
-        //     console.log(arr2)
-        // }
+        // For Alert
+        let arr = ["John", "Paul", "George", "Ringo"];
+        for (let arr2 of arr){
+            console.log(arr2)
+        }
     }
     {
-        // // For Select Option
-        // const currencies = ["USD", "EUR", "GBP", "UAH"]
-        // let str = "<select>"
-        // for (const currency of currencies){
-        //     str += `<option>${currency}</option>`;
-        // }
-        // str+= "</select>"
-        // document.write(str) //document.write відобразить ваш HTML на сторінці
+        // For Select Option
+        const currencies = ["USD", "EUR", "GBP", "UAH"]
+        let str = "<select>"
+        for (const currency of currencies){
+            str += `<option>${currency}</option>`;
+        }
+        str+= "</select>"
+        document.write(str) //document.write відобразить ваш HTML на сторінці
     }
     {
-        // // For Table Horizontal
-        // const names = ["John", "Paul", "George", "Ringo"]
-        // let   str = "<table>"
-        // for (const name of names){
-        //     str += `<tr style="display: inline-block"><th>${name}</th></tr >`;
-        // }
-        // str+= "</table>"
-        // document.write(str) //document.write отобразит ваш HTML на странице
+        // For Table Horizontal
+        const names = ["John", "Paul", "George", "Ringo"]
+        let   str = "<table>"
+        for (const name of names){
+            str += `<tr style="display: inline-block"><th>${name}</th></tr >`;
+        }
+        str+= "</table>"
+        document.write(str) //document.write отобразит ваш HTML на странице
     }
     {
-        // // For Table Vertical
-        // const names = ["John", "Paul", "George", "Ringo"]
-        // let   str = "<table>"
-        // for (const name of names){
-        //     str += `<tr><th>${name}</th></tr >`;
-        // }
-        // str+= "</table>"
-        // document.write(str) //document.write отобразит ваш HTML на странице
+        // For Table Vertical
+        const names = ["John", "Paul", "George", "Ringo"]
+        let   str = "<table>"
+        for (const name of names){
+            str += `<tr><th>${name}</th></tr >`;
+        }
+        str+= "</table>"
+        document.write(str) //document.write отобразит ваш HTML на странице
     }
     {
-        // // For Table Letters
-        // const currencies = ["USD", "EUR", "GBP", "UAH"];
-        // let str = "<table style='border-spacing:0; border-collapse:collapse;'>";
-        // str += "<tr><th style='background-color: lightgray; border: 1px solid black; width: 10px;height: 10px; text-align: center'></th><th style='background-color: lightgray; border: 1px solid black; width: 10px;height: 10px; text-align: center'></th><th style='background-color: lightgray; border: 1px solid black; width: 10px;height: 10px; text-align: center' colspan='4'></th></tr>";
-        // for (const currency of currencies) {
-        //     str += "<tr>";
-        //     for (const letter of currency) {
-        //         str += `<td style='border: 1px solid black; width: 35px;height: 50px; text-align: center'>${letter}</td>`;
-        //     }
-        //     str += "</tr>";
-        // }
-        // str += "</table>";
-        // document.write(str);
+        // For Table Letters
+        const currencies = ["USD", "EUR", "GBP", "UAH"];
+        let str = "<table style='border-spacing:0; border-collapse:collapse;'>";
+        str += "<tr><th style='background-color: lightgray; border: 1px solid black; width: 10px;height: 10px; text-align: center'></th><th style='background-color: lightgray; border: 1px solid black; width: 10px;height: 10px; text-align: center'></th><th style='background-color: lightgray; border: 1px solid black; width: 10px;height: 10px; text-align: center' colspan='4'></th></tr>";
+        for (const currency of currencies) {
+            str += "<tr>";
+            for (const letter of currency) {
+                str += `<td style='border: 1px solid black; width: 35px;height: 50px; text-align: center'>${letter}</td>`;
+            }
+            str += "</tr>";
+        }
+        str += "</table>";
+        document.write(str);
     }
     {
-        // // For Multiply Table
-        // document.write('<table style="border-spacing:0; border-collapse:collapse;">');
-        // for (let i = 1; i <= 5; i++) {
-        //     document.write('<tr>');
-        //     for (let j = 1; j <= 5; j++) {
-        //         let product = i * j;
-        //         if (i % 2 === 0) {
-        //             document.write(`<td style="border: 1px solid black;;background-color: lightblue; width: 35px;height: 50px; text-align: center">${product}</td>`);
-        //         } else {
-        //             document.write(`<td style="border: 1px solid black;;background-color: lightgreen;height: 50px;text-align: center">${product}</td>`);
-        //         }
-        //     }
-        //     document.write('</tr>');
-        // }
-        // document.write('</table>');
+        // For Multiply Table
+        document.write('<table style="border-spacing:0; border-collapse:collapse;">');
+        for (let i = 1; i <= 5; i++) {
+            document.write('<tr>');
+            for (let j = 1; j <= 5; j++) {
+                let product = i * j;
+                if (i % 2 === 0) {
+                    document.write(`<td style="border: 1px solid black;;background-color: lightblue; width: 35px;height: 50px; text-align: center">${product}</td>`);
+                } else {
+                    document.write(`<td style="border: 1px solid black;;background-color: lightgreen;height: 50px;text-align: center">${product}</td>`);
+                }
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
     }
     {
-        // // Function Capitalize
-        // const capitalize = str => {
-        //     let result = str[0].slice().toUpperCase() + str.slice(1).toLowerCase();
-        //     return result //саме цей код забезпечить повернення результату функції
-        // }
-        // console.log(capitalize("cANBerRa")) //Canberra
+        // Function Capitalize
+        const capitalize = str => {
+            let result = str[0].slice().toUpperCase() + str.slice(1).toLowerCase();
+            return result //саме цей код забезпечить повернення результату функції
+        }
+        console.log(capitalize("cANBerRa")) //Canberra
     }
     {
-        // //Map Capitalize
-        // let string = prompt('Введите ряд','Привет как дела');
-        // let spaceString = string.split(' ');
-        // let capitalize = upperString.map(x => x[0].toUpperCase() + x.slice(1).toLowerCase())
-        // console.log(capitalize)
+        //Map Capitalize
+        let string = prompt('Введите ряд','Привет как дела');
+        let spaceString = string.split(' ');
+        let capitalize = upperString.map(x => x[0].toUpperCase() + x.slice(1).toLowerCase())
+        console.log(capitalize)
     }
     {
-        // // Filter Lexics
-        // let userInput = prompt('Введіть рядок слів через пробіл','Шалом');
-        // let badWords = ["Гад", '25', 'Шалом'];
-        // let wordsArray = userInput.split(' ');
-        // let result = wordsArray.filter(word => badWords.includes(word)).length > 0;
-        // console.log(!result);
+        // Filter Lexics
+        let userInput = prompt('Введіть рядок слів через пробіл','Шалом');
+        let badWords = ["Гад", '25', 'Шалом'];
+        let wordsArray = userInput.split(' ');
+        let result = wordsArray.filter(word => badWords.includes(word)).length > 0;
+        console.log(!result);
     }
     {
-        // // Beep Lexics
-        // let userInput = prompt('Введіть рядок слів через пробіл', 'Шалом');
-        // let beep = ["Гад", '25', 'Шалом'];
-        // let wordsArray = userInput.split(' ');
-        // let resultArray = wordsArray.map(word => beep.includes(word) ? 'BEEP' : word);
-        // let resultString = resultArray.join(' ');
-        // console.log(resultString);
+        // Beep Lexics
+        let userInput = prompt('Введіть рядок слів через пробіл', 'Шалом');
+        let beep = ["Гад", '25', 'Шалом'];
+        let wordsArray = userInput.split(' ');
+        let resultArray = wordsArray.map(word => beep.includes(word) ? 'BEEP' : word);
+        let resultString = resultArray.join(' ');
+        console.log(resultString);
     }
     {
-        // // Reduce HTML
-        // const currencies = ["USD", "EUR", "GBP", "UAH"];
-        // let str = "<select>";
-        // str += currencies.reduce((a, b) => a + `<option>${b}</option>`, "");
-        // str += "</select>";
-        // document.write(str);
+        // Reduce HTML
+        const currencies = ["USD", "EUR", "GBP", "UAH"];
+        let str = "<select>";
+        str += currencies.reduce((a, b) => a + `<option>${b}</option>`, "");
+        str += "</select>";
+        document.write(str);
     }
     {
-        // // For Brackets Hell Check///////////////////////////
-        // const line = prompt()
-        // const bracketsStack = []
-        // let   i             = 0
-        // for (const character of line){
-        //     //не звертайте уваги на символи, крім трьох видів дужок
-        //     if (ПРОБЛЕМА) {
-        //         break; //оператор break перериває цикл передчасно
-        //     }
-        //     i++ //iндекс поточної лiтери
-        // }
+        // // For Brackets Hell Check
+
     }
 </script>
 </body>
