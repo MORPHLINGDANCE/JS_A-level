@@ -114,8 +114,9 @@
             [0, 3, 6, 9, 12],
             [0, 4, 8, 12, 16]
         ];
-        const arr2 = Object.assign(arr)
-        console.log(arr2)////////
+        // const arr2 = Object.assign(arr)
+        const arr2 = [[...arr[0]],[...arr[1]],[...arr[2]],[...arr[3]],[...arr[4]]]
+        console.log(arr2)
     }
     // Array Equals
     {
@@ -210,6 +211,7 @@
     {
         const currencies = ["USD", "EUR", "GBP", "UAH"]
         let   str = "<table style='border-spacing:0; border-collapse:collapse;'>"
+
         for(i = 0; i <3; i++){
             str +='<th style="background-color: grey;">'+'</th>'
         }
