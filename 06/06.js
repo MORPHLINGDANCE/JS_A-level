@@ -114,7 +114,6 @@
             [0, 3, 6, 9, 12],
             [0, 4, 8, 12, 16]
         ];
-        // const arr2 = Object.assign(arr)
         const arr2 = [[...arr[0]],[...arr[1]],[...arr[2]],[...arr[3]],[...arr[4]]]
         console.log(arr2)
     }
@@ -137,8 +136,8 @@
     // Destruct
     {
         const userValue = prompt('Введите преложение','Привет как дела?').split('');
-        const [firstUserValue,secondUserValue,thirdUserValue] = [...userValue[0],...userValue[6],...userValue[10]]
-        console.log([firstUserValue,secondUserValue,thirdUserValue])
+        const [firstUserValue,,,,,secondUserValue,,,thirdUserValue] = userValue;
+        console.log([firstUserValue,secondUserValue,thirdUserValue]);
     }
     // Destruct default
     {
@@ -161,7 +160,7 @@
             [,...thirdValue],
             [,...fourthValue]
         ] = arr
-        const resultArray = [...firstValue, ...secondValue, ...thirdValue, ...fourthValue];
+        const resultArray = [[...firstValue], [...secondValue], [...thirdValue], [...fourthValue]];
 
         console.log(resultArray);
     }
@@ -189,7 +188,7 @@
         let   str = '<table border="1" style="border: 1px solid black">';
 
         for (const name of names){
-            str += '<tr style="display: inline-block">'+'<td>'+ name +'</td>'+'</tr>';
+            str += '<td>'+ name +'</td>';
         }
         str+= "</table>"
 
@@ -263,19 +262,15 @@
     {
         const userPrompt = prompt('Введите строку','привет лиходей как дела?').toLowerCase().split(' ');
         const badWord = ['гад', 'подлец', 'иуда', 'лиходей'];
-        const filterBadWord = (userPrompt.filter(x => badWord.includes(x))).join(' ');
-        if (filterBadWord){
-            console.log(true);
-        } else
-        console.log(false);
+        const filterBadWord = (userPrompt.filter(x => !badWord.includes(x))).join(' ');
+        filterBadWord ? console.log(filterBadWord) : console.log(filterBadWord);
     }
     // Beep Lexics
     {
         const userPrompt = prompt('Введите строку','привет лиходей как дела?').toLowerCase().split(' ');
         const badWord = ['гад', 'подлец', 'иуда', 'лиходей'];
-        const mapUserPrompt = userPrompt.map(x => badWord.includes(x)).join(' ');
-        const result = mapUserPrompt.includes(true);
-        result ? 'BEEP' : 'НЕ BEEP'
+        const mapUserPrompt = (userPrompt.map(x => badWord.includes(x) ? 'BEEP' : x)).join(' ');
+        console.log(mapUserPrompt)
     }
     // Reduce HTML
     {
