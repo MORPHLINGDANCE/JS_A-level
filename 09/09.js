@@ -5,16 +5,16 @@
         if (age < 0){
             alert("невазможна");
         }
-        else if (age >= 0 && age < 18) {
+        else if (age < 18) {
             alert("школяр");
         }
-        else if (age > 18 && age < 30){
+        else if (age <= 30){
             alert("молодь");
         }
-        else if (age > 30 && age < 45){
+        else if (age <= 45){
             alert("зрілість");
         }
-        else if (age > 45 && age < 60){
+        else if (age <= 60){
             alert("захід сонця");
         }
         else if (age > 60) {
@@ -66,8 +66,14 @@
             document.write("<div style='background-color: red;'>червоний</div>");
             document.write("<div style='background-color: black; color: white;'>чорний</div>");
         }
+        else if(color === 'black'){
+            document.write("<div style='background-color: black; color: white;'>чорний</div>");
+        }
         else if (color === 'blue'){
             document.write("<div style='background-color: blue;'>синій</div>");
+            document.write("<div style='background-color: green;'>зелений</div>");
+        }
+        else if(color === 'green'){
             document.write("<div style='background-color: green;'>зелений</div>");
         }
         else{
@@ -107,6 +113,7 @@
         })
     }
     // closure cacl
+    {
         const container = document.createElement('div')
         document.body.append(container);
 
@@ -132,60 +139,60 @@
     }
     // closure calc 2
     {
-        const select = document.createElement('select')
-        select.id = 'from';
-        document.body.append(select);
+    // <select id='from'></select>
+    // <select id='to'></select>
+    // <div id='rate'></div>
+    // <input type='number' id='amount' placeholder='Сумма в валюте входной' />
+    // <div id='result'>Сумма в валюте которую хотим поменять</div>
 
-        const select2 = document.createElement('select');
-        select.id = 'to';
-        document.body.append(select2);
+    const selectFrom = document.getElementById('from');
+    const selectTo = document.getElementById('to');
+    const divRate = document.getElementById('rate');
+    const inputAmount = document.getElementById('amount');
+    const divResult = document.getElementById('result');
 
-        const div = document.createElement('div');
-        div.id = 'rate';
-        document.body.append(div);
+    fetch('https://open.er-api.com/v6/latest/USD')
+        .then(res => res.json())
+        .then(data => {
+            const rates = data.rates;
 
-        const input = document.createElement('input');
-        input.type = 'number';
-        input.id = 'amount';
-        document.body.append(input);
-
-        const div2 = document.createElement('div');
-        div2.id = 'result';
-        document.body.append(div2);
-
-        const container = document.createElement('div')
-        document.body.append(container);
-
-        function rateRasult (data) {
-           const fromCurrency = select.value;
-           const toCurrency = select2.value;
-           const amount = +input.value;
-
-           const rate = data.rates[toCurrency] / data.rates[fromCurrency];
-           div.innerText = `Кросс курс: 1 ${fromCurrency} = ${rate} ${toCurrency}`
-        }
-
-
-        fetch('https://open.er-api.com/v6/latest/USD').then(res => res.json())
-            .then(data => {
-
-                for (const rate in data.rates){
-                    const elementButton = document.createElement("button");
-                    elementButton.innerText = rate;
-                    container.append(elementButton);
-
-                    elementButton.onclick = () => {
-
-                        const userValueSum = +prompt('Введите сумму','55');
-                        const userValue = rate;
-                        const rateFirstCurrency = data.rates[userValue];
-
-                        const converted = userValueSum / rateFirstCurrency;
-                        alert(`${userValueSum} ${userValue} это ${converted} в USD`)
-                    }
+            for (const currency in rates) {
+                if (rates.hasOwnProperty(currency)) {
+                    const option = document.createElement('option');
+                    option.value = currency;
+                    option.innerText = currency;
+                    selectFrom.appendChild(option);
                 }
-            })
+            }
 
+            for (const currency in rates) {
+                if (rates.hasOwnProperty(currency)) {
+                    const option = document.createElement('option');
+                    option.value = currency;
+                    option.innerText = currency;
+                    selectTo.appendChild(option);
+                }
+            }
 
+            function updateExchangeRateAndResult() {
+                const fromCurrency = selectFrom.value;
+                const toCurrency = selectTo.value;
+                const rate = rates[toCurrency] / rates[fromCurrency];
+                divRate.textContent = `Кроскурс: 1 ${fromCurrency} = ${rate.toFixed(4)} ${toCurrency}`;
 
+                const amount = parseFloat(inputAmount.value);
+                if (!isNaN(amount)) {
+                    const result = amount * rate;
+                    divResult.textContent = `${amount.toFixed(2)} ${fromCurrency} = ${result.toFixed(2)} ${toCurrency}`;
+                } else {
+                    divResult.textContent = 'Введите сумму';
+                }
+            }
+
+            selectFrom.addEventListener('change', updateExchangeRateAndResult);
+            selectTo.addEventListener('change', updateExchangeRateAndResult);
+            inputAmount.addEventListener('input', updateExchangeRateAndResult);
+
+            updateExchangeRateAndResult();
+        })
     }
