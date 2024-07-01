@@ -50,19 +50,43 @@
         alert(`Слушай, ${nameSaver()}, го пить пиво. Ведь prompt был только один раз`)
     }
     // myBind
+    {
+        function myBind(defaultPar, thisPar, mass) {
+            return function(...params) {
+                // Используем оригинальный массив mass
+                const newParam = mass;
+        
+                for (let i = 0, j = 0; i < newParam.length; i++) {
+                    if (newParam[i] === undefined) {
+                        newParam[i] = params[j];
+                        j++;
+                    }
+                }
+        
+                return defaultPar.apply(thisPar, newParam);
+            }
+        }
+        let pow5 = myBind(Math.pow, Math, [, 5]) // перший параметр - функція для біндингу значень за замовчуванням, 
+                                                        // другий - this для цієї функції, третій - масив, в якому undefined означає
+                                                        // параметри, які мають передаватися під час виклику,
+                                                        // інші значення є значеннями за замовчуванням:
+        let cube = myBind(Math.pow, Math, [, 3]) // cube зводить число в куб
 
-    const array = [1,2,3,4];
-    function multBy( arr, n ){
-        return arr.map( (i) => i * n );
-        return ;
-    }
-    console.log(multBy(array, 10))
+        pow5(2) // => 32, викликає Math.pow(2,5), співвіднесіть з [undefined, 5]
+        pow5(4) // => 1024, викликає Math.pow(4,5), співвіднесіть з [undefined, 5]
+        cube(3) // => 27
 
-    const obj = {
-        name: 'Aleha',
-        age: 6
-    }
 
-    function(){
+        let chessMin = myBind(Math.min, Math, [, 4, , 5,, 8,, 9])
+        chessMin(-1,-5,3,15) // викликає Math.min(-1, 4, -5, 5, 3, 8, 15, 9), результат -5
 
+
+
+        let zeroPrompt = myBind(prompt, window, [undefined, "0"]) // аналогічно, тільки тепер задається "0" як текст за замовчанням в prompt,
+                                                                // а текст запрошення користувача задається під час виклику zeroPrompt
+        let someNumber = zeroPrompt("Введіть число") // викликає prompt("Введіть число","0")
+
+        const bindedJoiner = myBind((...params) => params.join(''), null, [, 'b', , , 'e', 'f'])//('a','c','d') === 'abcdef'
+        bindedJoiner('a','c','d') === 'abcdef'
+        bindedJoiner('1','2','3') === '1b23ef'        
     }
