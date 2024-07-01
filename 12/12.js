@@ -53,7 +53,7 @@
     {
         function myBind(defaultPar, thisPar, mass) {
             return function(...params) {
-                const newParam = mass;
+                const newParam = mass.slice();
         
                 for (let i = 0, j = 0; i < newParam.length; i++) {
                     if (newParam[i] === undefined) {
