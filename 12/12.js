@@ -53,7 +53,6 @@
     {
         function myBind(defaultPar, thisPar, mass) {
             return function(...params) {
-                // Используем оригинальный массив mass
                 const newParam = mass;
         
                 for (let i = 0, j = 0; i < newParam.length; i++) {
